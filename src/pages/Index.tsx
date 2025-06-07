@@ -55,16 +55,37 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Почему выбирают нас
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Более 10 лет опыта в сфере автомобильного аудио
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="Truck" size={32} className="text-blue-600" />
+                <Icon name="Award" size={32} className="text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Быстрая доставка</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                Оригинальные товары
+              </h3>
               <p className="text-gray-600">
-                Доставим ваш заказ в течение 1-2 дней по Москве
+                Работаем только с официальными поставщиками Pioneer, JBL, Alpine
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Icon name="Wrench" size={32} className="text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">
+                Профессиональная установка
+              </h3>
+              <p className="text-gray-600">
+                Сертифицированные мастера с опытом работы более 5 лет
               </p>
             </div>
             <div className="text-center">
@@ -73,16 +94,7 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2">Гарантия качества</h3>
               <p className="text-gray-600">
-                Официальная гарантия на всё оборудование
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="Wrench" size={32} className="text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Установка</h3>
-              <p className="text-gray-600">
-                Профессиональная установка и настройка
+                До 3 лет гарантии на товары и 1 год на установку
               </p>
             </div>
           </div>

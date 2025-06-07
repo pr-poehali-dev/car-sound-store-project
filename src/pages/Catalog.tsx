@@ -49,10 +49,10 @@ const Catalog = () => {
 
         {/* Filters */}
         <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
-          <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
-            <div>
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex-1">
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Категория:
+                Категория
               </label>
               <div className="flex flex-wrap gap-2">
                 {categories.map((category) => (
@@ -63,25 +63,25 @@ const Catalog = () => {
                     }
                     size="sm"
                     onClick={() => setSelectedCategory(category)}
+                    className="text-sm"
                   >
                     {category}
                   </Button>
                 ))}
               </div>
             </div>
-
-            <div>
+            <div className="md:w-48">
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Сортировка:
+                Сортировка
               </label>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="name">По названию</option>
-                <option value="price-low">Цена: по возрастанию</option>
-                <option value="price-high">Цена: по убыванию</option>
+                <option value="price-low">Сначала дешёвые</option>
+                <option value="price-high">Сначала дорогие</option>
                 <option value="rating">По рейтингу</option>
               </select>
             </div>
@@ -89,14 +89,14 @@ const Catalog = () => {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {sortedProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
 
         {sortedProducts.length === 0 && (
-          <div className="text-center py-12">
+          <div className="text-center py-16">
             <Icon
               name="Search"
               size={48}
@@ -105,7 +105,9 @@ const Catalog = () => {
             <h3 className="text-lg font-medium text-gray-900 mb-2">
               Товары не найдены
             </h3>
-            <p className="text-gray-600">Попробуйте изменить фильтры поиска</p>
+            <p className="text-gray-600">
+              Попробуйте изменить фильтры или выбрать другую категорию
+            </p>
           </div>
         )}
       </div>
